@@ -87,3 +87,16 @@ mysql> SELECT * FROM Address_Book;
 | Vishnu     | RK        | Anagodu   | Chennai    | Tamilnadu | 5567 |      7598463 | vish@gmail.com |
 +------------+-----------+-----------+------------+-----------+------+--------------+----------------+
 2 rows in set (0.03 sec)
+
+//UC5 -Ability to person contact by their First_Name From Address_Book Table
+
+mysql> DELETE FROM Address_Book WHERE First_Name = 'Vishnu';
+Query OK, 1 row affected (0.12 sec)
+
+mysql> SELECT * FROM Address_Book;
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+| First_Name | Last_Name | Address   | City       | State     | Zip | Phone_Number | Email         |
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+| Rakesh     | SR        | Siddanuru | Davanagere | Karnataka | 123 |       987456 | abc@gmail.com |
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+1 row in set (0.03 sec)
