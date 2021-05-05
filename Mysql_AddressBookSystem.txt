@@ -100,3 +100,21 @@ mysql> SELECT * FROM Address_Book;
 | Rakesh     | SR        | Siddanuru | Davanagere | Karnataka | 123 |       987456 | abc@gmail.com |
 +------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
 1 row in set (0.03 sec)
+
+//UC6 -Ability to Retrieve Person contact by City and State.
+
+mysql> SELECT * FROM Address_Book WHERE City = 'Davanagere';
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+| First_Name | Last_Name | Address   | City       | State     | Zip | Phone_Number | Email         |
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+| Rakesh     | SR        | Siddanuru | Davanagere | Karnataka | 123 |       987456 | abc@gmail.com |
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM Address_Book WHERE State = 'Karnataka';
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+| First_Name | Last_Name | Address   | City       | State     | Zip | Phone_Number | Email         |
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+| Rakesh     | SR        | Siddanuru | Davanagere | Karnataka | 123 |       987456 | abc@gmail.com |
++------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
+1 row in set (0.00 sec)
