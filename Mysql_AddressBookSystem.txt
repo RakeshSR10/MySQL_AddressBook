@@ -118,3 +118,40 @@ mysql> SELECT * FROM Address_Book WHERE State = 'Karnataka';
 | Rakesh     | SR        | Siddanuru | Davanagere | Karnataka | 123 |       987456 | abc@gmail.com |
 +------------+-----------+-----------+------------+-----------+-----+--------------+---------------+
 1 row in set (0.00 sec)
+
+//UC7 -Ability to find the size() of the Address_Book by their State and City
+
+mysql> INSERT into Address_Book (First_Name, Last_Name, Address, City, State, Zip, Phone_Number, Email) values
+    -> ('Cady','LL','Jagaluru','Chitradurga','Kerala',8520,88556611,'cady@gmail.com'),
+    -> ('John','MN','Belva','Shivmoga','Karnataka',1100,88009977,'john@gmail.com');
+Query OK, 2 rows affected (0.13 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_Book;
++------------+-----------+-----------+-------------+-----------+------+--------------+----------------+
+| First_Name | Last_Name | Address   | City        | State     | Zip  | Phone_Number | Email          |
++------------+-----------+-----------+-------------+-----------+------+--------------+----------------+
+| Rakesh     | SR        | Siddanuru | Davanagere  | Karnataka |  123 |       987456 | abc@gmail.com  |
+| Cady       | LL        | Jagaluru  | Chitradurga | Kerala    | 8520 |     88556611 | cady@gmail.com |
+| John       | MN        | Belva     | Shivmoga    | Karnataka | 1100 |     88009977 | john@gmail.com |
++------------+-----------+-----------+-------------+-----------+------+--------------+----------------+
+3 rows in set (0.02 sec)
+
+mysql> SELECT State, COUNT(State) FROM Address_Book GROUP BY State;
++-----------+--------------+
+| State     | COUNT(State) |
++-----------+--------------+
+| Karnataka |            2 |
+| Kerala    |            1 |
++-----------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT City, COUNT(City) FROM Address_Book GROUP BY City;
++-------------+-------------+
+| City        | COUNT(City) |
++-------------+-------------+
+| Davanagere  |           1 |
+| Chitradurga |           1 |
+| Shivmoga    |           1 |
++-------------+-------------+
+3 rows in set (0.00 sec)
