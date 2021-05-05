@@ -63,3 +63,27 @@ mysql> select * from Address_Book;
 | Vishnu     | RK        | Anagodu   | Chennai    | Tamilnadu | 5567 |      7598463 | vish@gmail.com |
 +------------+-----------+-----------+------------+-----------+------+--------------+----------------+
 2 rows in set (0.04 sec)
+
+//UC3 - Ability to Edit existing contact First_Name from Address_Book.
+
+mysql> select * from Address_Book;
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+| First_Name | Last_Name | Address   | City       | State     | Zip  | Phone_Number | Email          |
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+| Raki       | SR        | Siddanuru | Davanagere | Karnataka |  123 |       987456 | abc@gmail.com  |
+| Vishnu     | RK        | Anagodu   | Chennai    | Tamilnadu | 5567 |      7598463 | vish@gmail.com |
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+2 rows in set (0.04 sec)
+
+mysql> UPDATE Address_Book SET First_Name = 'Rakesh' WHERE Last_Name = 'SR';
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM Address_Book;
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+| First_Name | Last_Name | Address   | City       | State     | Zip  | Phone_Number | Email          |
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+| Rakesh     | SR        | Siddanuru | Davanagere | Karnataka |  123 |       987456 | abc@gmail.com  |
+| Vishnu     | RK        | Anagodu   | Chennai    | Tamilnadu | 5567 |      7598463 | vish@gmail.com |
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+2 rows in set (0.03 sec)
