@@ -46,3 +46,20 @@ mysql> describe Address_Book;
 | Email        | varchar(50)  | NO   |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.07 sec)
+
+//UC3 -Ability to Inserting 2 values to the Address_Book table
+
+mysql> INSERT into Address_Book (First_Name, Last_Name, Address, City, State, Zip, Phone_Number, Email) values
+    -> ('Raki','SR','Siddanuru','Davanagere','Karnataka',123,987456,'abc@gmail.com'),
+    -> ('Vishnu','RK','Anagodu','Chennai','Tamilnadu',5567,7598463,'vish@gmail.com');
+Query OK, 2 rows affected (0.12 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from Address_Book;
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+| First_Name | Last_Name | Address   | City       | State     | Zip  | Phone_Number | Email          |
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+| Raki       | SR        | Siddanuru | Davanagere | Karnataka |  123 |       987456 | abc@gmail.com  |
+| Vishnu     | RK        | Anagodu   | Chennai    | Tamilnadu | 5567 |      7598463 | vish@gmail.com |
++------------+-----------+-----------+------------+-----------+------+--------------+----------------+
+2 rows in set (0.04 sec)
